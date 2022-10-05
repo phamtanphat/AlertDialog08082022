@@ -3,16 +3,15 @@ package com.example.alertdialog08082022;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Constraints;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                     window.setGravity(Gravity.CENTER);
                     window.setLayout(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
                 }
+
+                SeekBar seekBarAlpha = dialog.findViewById(R.id.seek_bar_red)
+
+
 
                 dialog.show();
             }

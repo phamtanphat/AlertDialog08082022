@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
@@ -17,13 +17,13 @@
         tools:src="#673AB7" />
 
     <TextView
-        android:id="@+id/textViewHex"
+        android:id="@+id/text_view_hex_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#C1BFBF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/textViewRGB"
+        app:layout_constraintBottom_toTopOf="@id/text_view_rgb_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +31,7 @@
         tools:text="HEX # FF 673AB7" />
 
     <TextView
-        android:id="@+id/textViewRGB"
+        android:id="@+id/text_view_rgb_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#C1BFBF"
@@ -40,8 +40,8 @@
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@id/textViewHex"
-        app:layout_constraintTop_toBottomOf="@id/textViewHex"
+        app:layout_constraintStart_toStartOf="@id/text_view_hex_color"
+        app:layout_constraintTop_toBottomOf="@id/text_view_hex_color"
         tools:text="RGB 255 103 58 183" />
 
 
@@ -53,14 +53,14 @@
         app:layout_constraintGuide_percent="0.3" />
 
     <TextView
-        android:id="@+id/textViewA"
+        android:id="@+id/text_view_alpha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textStyle="bold"
         android:text="A"
-        app:layout_constraintBottom_toTopOf="@id/textViewR"
-        app:layout_constraintEnd_toStartOf="@id/seekBarA"
+        app:layout_constraintBottom_toTopOf="@id/text_view_red"
+        app:layout_constraintEnd_toStartOf="@id/seek_bar_alpha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontal" />
 
@@ -70,74 +70,74 @@
         android:progressTint="#CCCACA"
         android:paddingVertical="15dp"
         app:layout_constraintVertical_chainStyle="spread"
-        android:id="@+id/seekBarA"
+        android:id="@+id/seek_bar_alpha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/seek_bar_r"
+        app:layout_constraintBottom_toTopOf="@id/seek_bar_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textViewA"
+        app:layout_constraintStart_toEndOf="@id/text_view_alpha"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontal" />
 
     <TextView
-        android:id="@+id/textViewR"
+        android:id="@+id/text_view_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textStyle="bold"
         android:text="R"
-        app:layout_constraintBottom_toTopOf="@id/textViewG"
-        app:layout_constraintEnd_toStartOf="@id/seek_bar_r"
+        app:layout_constraintBottom_toTopOf="@id/text_view_green"
+        app:layout_constraintEnd_toStartOf="@id/seek_bar_red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewA" />
+        app:layout_constraintTop_toBottomOf="@id/text_view_alpha" />
 
     <SeekBar
         tools:progress="50"
         android:thumbTint="#ED3333"
         android:progressTint="#ED3333"
         android:paddingVertical="15dp"
-        android:id="@+id/seek_bar_r"
+        android:id="@+id/seek_bar_red"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/seekBarG"
+        app:layout_constraintBottom_toTopOf="@id/seek_bar_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textViewR"
-        app:layout_constraintTop_toBottomOf="@id/seekBarA" />
+        app:layout_constraintStart_toEndOf="@id/text_view_red"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_alpha" />
 
     <TextView
-        android:id="@+id/textViewG"
+        android:id="@+id/text_view_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textStyle="bold"
         android:text="G"
-        app:layout_constraintEnd_toStartOf="@id/seekBarG"
+        app:layout_constraintEnd_toStartOf="@id/seek_bar_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewR"
-        app:layout_constraintBottom_toTopOf="@id/textViewB"/>
+        app:layout_constraintTop_toBottomOf="@id/text_view_red"
+        app:layout_constraintBottom_toTopOf="@id/text_view_blue"/>
 
     <SeekBar
         tools:progress="50"
         android:thumbTint="#49E150"
         android:progressTint="#49E150"
         android:paddingVertical="15dp"
-        android:id="@+id/seekBarG"
+        android:id="@+id/seek_bar_green"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/seekBarB"
+        app:layout_constraintBottom_toTopOf="@id/seek_bar_blue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textViewG"
-        app:layout_constraintTop_toBottomOf="@id/seek_bar_r" />
+        app:layout_constraintStart_toEndOf="@id/text_view_green"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_red" />
 
     <TextView
-        android:id="@+id/textViewB"
+        android:id="@+id/text_view_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:textStyle="bold"
         android:text="B"
-        app:layout_constraintEnd_toStartOf="@id/seekBarB"
+        app:layout_constraintEnd_toStartOf="@id/seek_bar_blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewG"
+        app:layout_constraintTop_toBottomOf="@id/text_view_green"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal1"/>
 
     <SeekBar
@@ -145,13 +145,13 @@
         android:thumbTint="#03A9F4"
         android:progressTint="#03A9F4"
         android:paddingVertical="15dp"
-        android:id="@+id/seekBarB"
+        android:id="@+id/seek_bar_blue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/textViewA"
-        app:layout_constraintTop_toBottomOf="@id/seekBarG" />
+        app:layout_constraintStart_toEndOf="@id/text_view_red"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_green" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal1"
@@ -167,8 +167,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1"
-        app:layout_constraintEnd_toStartOf="@id/textViewOk"
-        android:id="@+id/textViewCancel"
+        app:layout_constraintEnd_toStartOf="@id/text_view_ok"
+        android:id="@+id/text_view_cancel"
         android:textAllCaps="true"
         android:text="Cancel"
         android:layout_width="wrap_content"
@@ -178,11 +178,11 @@
         android:textStyle="bold"
         android:textColor="#f20"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@id/textViewCancel"
+        app:layout_constraintStart_toEndOf="@id/text_view_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontal1"
         app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/textViewOk"
+        android:id="@+id/text_view_ok"
         android:textAllCaps="true"
         android:text="Ok"
         android:layout_width="wrap_content"
