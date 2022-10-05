@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,12 +68,50 @@ public class MainActivity extends AppCompatActivity {
                     window.setLayout(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
                 }
 
-                SeekBar seekBarAlpha = dialog.findViewById(R.id.seek_bar_red)
+                SeekBar seekBarAlpha = dialog.findViewById(R.id.seek_bar_alpha);
+                SeekBar seekBarRed = dialog.findViewById(R.id.seek_bar_red);
+                SeekBar seekBarGreen = dialog.findViewById(R.id.seek_bar_green);
+                SeekBar seekBarBlue = dialog.findViewById(R.id.seek_bar_blue);
+                TextView tvHex = dialog.findViewById(R.id.text_view_hex_color);
+                TextView tvRgb = dialog.findViewById(R.id.text_view_rgb_color);
+                TextView tvButtonOk = dialog.findViewById(R.id.text_view_ok);
+                TextView tvButtonCancel = dialog.findViewById(R.id.text_view_cancel);
 
-
+                seekBarAlpha.setOnSeekBarChangeListener(listenerSeekBarChange);
+                seekBarRed.setOnSeekBarChangeListener(listenerSeekBarChange);
+                seekBarGreen.setOnSeekBarChangeListener(listenerSeekBarChange);
+                seekBarBlue.setOnSeekBarChangeListener(listenerSeekBarChange);
 
                 dialog.show();
             }
+
+            private SeekBar.OnSeekBarChangeListener listenerSeekBarChange = new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                    switch (seekBar.getId()) {
+                        case R.id.seek_bar_alpha:
+                            break;
+                        case R.id.seek_bar_red:
+                            break;
+                        case R.id.seek_bar_green:
+                            break;
+                        case R.id.seek_bar_blue:
+                            break;
+                    }
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+
+                }
+            };
         });
     }
+
+
 }
