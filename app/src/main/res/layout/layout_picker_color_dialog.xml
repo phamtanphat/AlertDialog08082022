@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/image_view"
+        android:id="@+id/image_view_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
@@ -39,8 +39,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@id/text_view_hex_color"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_view_hex_color"
         tools:text="RGB 255 103 58 183" />
 
